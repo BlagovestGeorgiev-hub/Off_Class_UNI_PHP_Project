@@ -14,9 +14,10 @@ if(isset($_POST['submit'])){
  {
  $name=$_POST['name'];
  $pass=$_POST['pass'];
+ $salt=$name;
  $type;
  	$hasher = new DiContainer($md5);
-	$hashedP=base64_encode (bin2hex (strrev ($hasher->hashIt($pass.$name))));
+	$hashedP=base64_encode (bin2hex (strrev ($hasher->hashIt($pass.$salt))));
  
 
  $query = mysqli_query($conn, "SELECT name,password FROM login_reg WHERE password='$hashedP' AND name='$name'");

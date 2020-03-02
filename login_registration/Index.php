@@ -24,6 +24,8 @@ include("loginserv.php");
 <input type="submit" value="Login" name="submit">
 
 <p>Dont have an account? <a href="RegTest.php">Register here</a>.</p>
+<p>Dont have an account? <a href="RegTestT.php">Teacher register here</a>.</p>
+<p>Dont have an account? <a href="RegTestCSSFail.php">Test register here</a>.</p>
 <!-- Error -->
 <span><?php echo $error; ?></span>
 </div>

@@ -11,19 +11,22 @@ document.write(" "+Date())
 </head>
 <body bgcolor=lightblue>
 <div align=center>
-<h2>Registration</h2>
 <?php
-include("regserv.php");
+include("regservT.php");
 ?>
+
+<h2>Registration for teachers</h2>
 <big><b>
 <pre>
-<form name="f1" action="" method="post" style="text-align:center;">
+<form name="f2" action="" method="post" style="text-align:center;">
 <label for="name">Enter Username:</label>
 <input type="text" name="name"><br>
 <label for="pass">Password:</label>
-<input type="password" id="pass" name="pass">
+<input type="password" name="pass"><br>
+<label for="key">Key:</label>
+<input type="text" name="key">
 
-<input type="submit" value="Registrate" name="submit">
+<input type="submit" value="Registrate" name="submitT">
 
 <span><?php echo $error; ?></span><span><?php echo $done; ?></span>
 </big>
